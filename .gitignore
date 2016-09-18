@@ -27,3 +27,11 @@
 *.exe
 *.out
 *.app
+
+# Python
+build/
+*.pyc
+*.egg-info/
+
+# Vim
+.*.swp
