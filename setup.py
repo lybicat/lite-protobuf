@@ -7,6 +7,6 @@ setup(name='liteproto',
       test_suite='test_liteproto',
       ext_modules=[
           Extension('liteproto',
-              sources = ['liteproto.c'])
+              sources=['liteproto.cc'])
           ])
 

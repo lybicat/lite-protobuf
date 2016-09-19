@@ -1,10 +1,23 @@
-import unittest
+from unittest import TestCase
+from liteproto import load
+from liteproto import loads
 
 
-class TestLiteProto(unittest.TestCase):
-    def test_load(self):
-        pass
+class TestLiteProto(TestCase):
+    def test_load_proto_file(self):
+        load('./ut.proto')
 
+    def test_load_proto_string(self):
+        loads('''syntax = "proto2";
 
-if __name__ == '__main__':
-    unittest.main()
+message Ack{
+    enum ConfirmationStatus{
+        ACK = 1;
+        NACK = 2;
+    }
+
+    required ConfirmationStatus confirmation = 1;
+    required uint32 transactionId = 2;
+    optional string reason = 3;
+}''')
+
