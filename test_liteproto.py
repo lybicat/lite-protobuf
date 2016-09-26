@@ -5,7 +5,7 @@ from liteproto import loads
 
 class TestLiteProto(TestCase):
     def test_load_proto_file(self):
-        load('./ut.proto')
+        load('ut.proto', 'Pair')
 
     def test_load_proto_string(self):
         loads('''syntax = "proto2";

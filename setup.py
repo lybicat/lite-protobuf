@@ -7,6 +7,7 @@ setup(name='liteproto',
       test_suite='test_liteproto',
       ext_modules=[
           Extension('liteproto',
-              sources=['liteproto.cc'])
+              sources=['liteproto.cc'],
+              libraries=['protobuf'])
           ])
 

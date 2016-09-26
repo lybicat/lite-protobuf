@@ -1,12 +1,9 @@
 syntax = "proto2";
 
-message Ack{
-    enum ConfirmationStatus{
-        ACK = 1;
-        NACK = 2;
-    }
 
-    required ConfirmationStatus confirmation = 1;
-    required uint32 transactionId = 2;
-    optional string reason = 3;
+message Pair {
+    required string key = 1;
+    required uint32 value = 2;
+
 }
+
